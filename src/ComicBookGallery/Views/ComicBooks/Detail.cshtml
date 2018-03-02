@@ -18,11 +18,10 @@
                 <h5>Artists:</h5>
                 <div>
                     <ul>
-                        @foreach (var artist in Model.Artists)
-                    {
-                        <text>
-                            <li>@artist.Role: @artist.Name</li></text>
-                }
+                    @foreach (var artist in Model.Artists)
+                        {
+                        <li>@artist.Role: @artist.Name</li>
+                        }
                     </ul>
                 </div>
         }
