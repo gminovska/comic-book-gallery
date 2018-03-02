@@ -17,6 +17,12 @@ namespace ComicBookGallery.Controllers
         {
             _comicBookRepository = new ComicBookRepository();
         }
+
+        public ActionResult Index()
+        {
+            var comicBook = _comicBookRepository.GetComicBooks();
+            return View(comicBook);
+        }
         //The action methods return Action Result types (base class ActionResult), such as ContentResult or RedirectResult
         public ActionResult Detail(int? id)
         {
